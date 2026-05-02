@@ -1,11 +1,13 @@
 const isValidEmail = (email) => {
-        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return re.test(email);
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
 };
+
+
 
 function showToast(message, type = 'success', duration = 5000) {
     const containerToast = document.getElementById('toastContainer');
-    
+
     if (!containerToast) {
         console.error("Elemen #toastContainer tidak ditemukan di HTML!");
         return;
@@ -63,83 +65,124 @@ const closeModal = (modalElement) => {
 };
 
 
-const cariPengguna = (email , password) => {
-
-
-    console.log(email);
-
-    const user = dataPengguna.find((item) => {
-        
-        if(item.email === email && item.password){
-            return item;
-        }
-       
-
-    });
-
-    return user;
-
-    
-}
-
-const handleLogin = (event) => {
-
-    event.preventDefault();
-    const email = document.getElementById('emailLogin');
-    const password = document.getElementById('password-login');
-
-    const validasiUser = cariPengguna(email.value , password.value);
-    
-    console.log(validasiUser);
-    if(validasiUser){
-        showToast(`Login Success! Welcome ${validasiUser.nama}` , 'success' , 5000);
-
-        localStorage.setItem('userActive' , JSON.stringify(validasiUser));
-
-        setTimeout(() => {
-
-            window.location.replace('dashboard.html');
-
-        }, 1500);
-    }else{
-        showToast(`Email atau kata sandi salah`, 'error' , 5000);
-    }
-
-   
-
+const updateUI = (el, msgEl, res) => {
+    msgEl.className = res.isValid ? "text-success" : "text-error";
+    msgEl.innerHTML = res.isValid ? res.successMsg : res.errorMsg;
+    el.style.borderColor = res.isValid ? "#10b981" : "#ef4444";
 };
 
-const checkEmail = (event) =>{
+const checkValidasi = (event) => {
     event.preventDefault();
 
     const input = event.target;
     const value = input.value.trim();
 
+    const ruleType = input.getAttribute('data-rules');
     const targetId = input.getAttribute('data-validasi-text');
     const displayValidasi = document.getElementById(targetId);
 
-    if(!displayValidasi) return;
-   
-    if(!isValidEmail(value)){
+    if (!displayValidasi) return;
 
-        displayValidasi.className = "text-error";
-        displayValidasi.innerHTML = "Format email tidak valid. Ex : jhon@gmail.com";
-        input.style.borderColor = "#ef4444";
+    let result;
 
-    }else{
-        displayValidasi.className = "text-success";
-        displayValidasi.innerHTML = "Format email sesuai";
-        input.style.borderColor = "#10b981";
+
+    if (ruleType === "confirmPassword") {
+        const compareId = input.getAttribute('data-compare');
+        const compareValue = document.getElementById(compareId)?.value || '';
+        result = validationRules.confirmPassword(value, compareValue);
+    } else if (ruleType === "minLength") {
+        const min = input.getAttribute('data-min') || 6;
+        result = validationRules.minLength(value, min);
+    } else if (ruleType === "maxLength") {
+        const max = input.getAttribute('data-max') || 12;
+        result = validationRules.maxLength(value, max);
+    } else {
+        result = validationRules[ruleType](value);
     }
-    
+
+    updateUI(input, displayValidasi, result);
+
+};
+
+
+const clearValidasi = (formElement) => {
+    const inputs = formElement.querySelectorAll('[data-validasi-text]');
+
+    inputs.forEach(input => {
+        input.style.borderColor = "";
+
+        const targetId = input.getAttribute('data-validasi-text');
+        const displayValidasi = document.getElementById(targetId);
+
+        if (displayValidasi) {
+            displayValidasi.innerHTML = "";
+            displayValidasi.className = "";
+        }
+    });
 };
 
 document.addEventListener('DOMContentLoaded', () => {
 
 
+    // NAV ITEM
+    const path = window.location.pathname.split("/").pop() || "index.html";
+
+    const link = document.querySelectorAll('.nav-item, .nav-link');
+    const title = document.querySelector('.title');
+
+
+    let cleanName = path.replace(".html" , "");
+
+
+    link.forEach(link => {
+
+        const href = link.getAttribute('href');
+
+
+        if (path === 'index.html' && href === 'index.html') {
+
+            link.classList.add('active');
+
+        } else {
+
+
+            if (path === href) {
+
+
+                link.classList.add('active');
+                
+
+            }
+
+        }
+
+    });
+
+    if(cleanName === 'index'){
+        cleanName = 'HOME';
+    }else{
+        cleanName = cleanName.toUpperCase();
+    }
+
+    
+    if(path.includes('detail-page.html')){
+
+        const queryString = window.location.search;
+        const urlParam = new URLSearchParams(queryString);
+    
+        const kodeBarang = urlParam.get("id");
+
+        title.innerText = `SITTA - Detail ${kodeBarang}`;
+
+    }else{
+
+        cleanName = cleanName.replace('-', ' ');
+        title.innerText = `SITTA - ${cleanName}`;
+    }
+
 
     document.addEventListener('click', (e) => {
-        
+
         const btnToggle = e.target.closest('.toggle-password');
         if (btnToggle) {
             const targetId = btnToggle.getAttribute('data-target');
@@ -148,7 +191,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (passwordInput) {
                 const isPassword = passwordInput.getAttribute('type') === 'password';
                 passwordInput.setAttribute('type', isPassword ? 'text' : 'password');
-                
+
                 btnToggle.classList.toggle('is-visible');
                 btnToggle.style.color = isPassword ? '#111' : '#888';
             }

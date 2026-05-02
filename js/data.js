@@ -86,6 +86,141 @@ var dataBahanAjar = [
     edisi: "4",
     stok: 204,
     cover: "img/paud_perkembangan.jpg"
+  },
+  {
+    kodeLokasi: "MSIMIN428",
+    kodeBarang: "MSIM420801",
+    namaBarang: "Interaksi Manusia dan Komputer",
+    jenisBarang: "BMP",
+    edisi: "4",
+    stok: 215,
+    cover: "https://univterbuka.kotobee.com/books/f1e9d2911d/EPUB/EPUB/imgs/cover_thumb.png"
+  },
+  {
+    kodeLokasi: "MKWIBE891",
+    kodeBarang: "MKWI420202",
+    namaBarang: "Belajar Era Digital",
+    jenisBarang: "BMP",
+    edisi: "6",
+    stok: 432,
+    cover: "https://univterbuka.kotobee.com/books/fcd3ea5d4b/EPUB/EPUB/imgs/untitled07_thumb.jpg"
+  },
+  {
+    kodeLokasi: "MSIMKE302",
+    kodeBarang: "MSIM440501",
+    namaBarang: "Keamanan Sistem Informasi",
+    jenisBarang: "BMP",
+    edisi: "9",
+    stok: 128,
+    cover: "https://univterbuka.kotobee.com/books/f931039990/EPUB/EPUB/imgs/untitled11_thumb.jpg"
+  },
+  {
+    kodeLokasi: "MSIMTA554",
+    kodeBarang: "MSIM440201",
+    namaBarang: "Tata Kelola Teknologi Informasi",
+    jenisBarang: "BMP",
+    edisi: "3",
+    stok: 310,
+    cover: "https://univterbuka.kotobee.com/books/f4408cec92/EPUB/EPUB/imgs/gambar4_thumb.png"
+  },
+  {
+    kodeLokasi: "MSIMAN119",
+    kodeBarang: "MSIM430201",
+    namaBarang: "Analisis dan Perancangan Sistem",
+    jenisBarang: "BMP",
+    edisi: "7",
+    stok: 87,
+    cover: "https://univterbuka.kotobee.com/books/ff1b155dd3/EPUB/EPUB/imgs/18_thumb.png"
+  },
+  {
+    kodeLokasi: "MSIMSI772",
+    kodeBarang: "MSIM430201",
+    namaBarang: "Sistem Informasi Manajemen",
+    jenisBarang: "BMP",
+    edisi: "1",
+    stok: 456,
+    cover: "https://univterbuka.kotobee.com/books/f0d5c5572b/EPUB/EPUB/imgs/cover_thumb.png"
+  },
+  {
+    kodeLokasi: "MSIMPE341",
+    kodeBarang: "MSIM430201",
+    namaBarang: "Pemprograman Web",
+    jenisBarang: "BMP",
+    edisi: "5",
+    stok: 192,
+    cover: "https://univterbuka.kotobee.com/books/ff749a18d2/EPUB/EPUB/imgs/cover01_thumb.png"
+  },
+  {
+    kodeLokasi: "MSIMBA602",
+    kodeBarang: "MSIM420601",
+    namaBarang: "Basis Data",
+    jenisBarang: "BMP",
+    edisi: "8",
+    stok: 275,
+    cover: "https://univterbuka.kotobee.com/books/fe4ebb2ecd/EPUB/EPUB/imgs/cvr_thumb.png"
+  },
+  {
+    kodeLokasi: "EKMAPE518",
+    kodeBarang: "EKMA415803",
+    namaBarang: "Perilaku Organisasi",
+    jenisBarang: "BMP",
+    edisi: "2",
+    stok: 398,
+    cover: "https://univterbuka.kotobee.com/books/f7505ea17a/EPUB/EPUB/imgs/ekma415803_coverluar_thumb.jpg"
+  },
+  {
+    kodeLokasi: "STSIPR902",
+    kodeBarang: "STSI420601",
+    namaBarang: "Proses Bisnis",
+    jenisBarang: "BMP",
+    edisi: "4",
+    stok: 145,
+    cover: "https://univterbuka.kotobee.com/books/f287bcd665/EPUB/EPUB/imgs/capture_thumb.PNG"
+  },
+  {
+    kodeLokasi: "MKWNBA108",
+    kodeBarang: "MKWN410801",
+    namaBarang: "Bahasa Indonesia",
+    jenisBarang: "BMP",
+    edisi: "6",
+    stok: 499,
+    cover: "https://univterbuka.kotobee.com/books/fd243fa88e/EPUB/EPUB/imgs/capture_thumb.PNG"
+  },
+  {
+    kodeLokasi: "MKWNPA411",
+    kodeBarang: "MKWN411001",
+    namaBarang: "Pancasila",
+    jenisBarang: "BMP",
+    edisi: "3",
+    stok: 321,
+    cover: "https://univterbuka.kotobee.com/books/fee945ed8e/EPUB/EPUB/imgs/capture_thumb.PNG"
+  },
+  {
+    kodeLokasi: "SATSME412",
+    kodeBarang: "SATS412103",
+    namaBarang: "Metode Stastika",
+    jenisBarang: "BMP",
+    edisi: "9",
+    stok: 287,
+    cover: "https://univterbuka.kotobee.com/books/fd88c5c1d5/EPUB/EPUB/imgs/capture_thumb.PNG"
+  },
+  {
+    kodeLokasi: "SATSKO411",
+    kodeBarang: "SATS411102",
+    namaBarang: "Komputer 1",
+    jenisBarang: "BMP",
+    edisi: "2",
+    stok: 110,
+    cover: "https://univterbuka.kotobee.com/books/f0fcd35053/EPUB/EPUB/imgs/capture_thumb.PNG"
+  },
+  {
+    kodeLokasi: "MSIMLO410",
+    kodeBarang: "MSIM410302",
+    namaBarang: "Logika Informatika",
+    jenisBarang: "BMP",
+    edisi: "1",
+    stok: 415,
+    cover: "https://univterbuka.kotobee.com/books/fe931b52df/EPUB/EPUB/imgs/capture_thumb.PNG"
   }
 ];
 
