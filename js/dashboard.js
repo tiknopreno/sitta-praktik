@@ -57,18 +57,7 @@ function updateClock() {
     clockElement.innerText = now.toLocaleString('id-ID', options);
 }
 
-function toggleLaporanMenu() {
-    const overlay = document.getElementById('laporan-overlay');
-    overlay.classList.toggle('show');
-}
 
-
-window.onclick = function(event) {
-    const overlay = document.getElementById('laporan-overlay');
-    if (event.target == overlay) {
-        overlay.classList.remove('show');
-    }
-}
 
 
 const detailPage = (id , currentPage) => {

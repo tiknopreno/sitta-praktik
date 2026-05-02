@@ -15,57 +15,8 @@
 <body>
 
     <!-- HEADER -->
-    <header class="main-header">
-        <nav class="container nav-wrapper">
-            <div class="logo">
-                <h1>SITTA</h1>
-            </div>
-            <ul class="nav-menu" id="nav-menu">
-                <li>
-                    <a href="index.html" class="nav-link">
-                        <i class="bx bx-home"></i><span>Home</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="bahan-ajar.html" class="nav-link">
-                        <i class="bx bx-library"></i><span>Bahan Ajar</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="nav-link">
-                        <i class="bx bx-map-pin"></i><span>Tracking</span>
-                    </a>
-                </li>
-                <li class="dropdown-wrapper">
-                    <a href="#" class="nav-link">
-                        <i class='bx bx-bar-chart-alt-2'></i>
-                        Laporan <i class='bx bx-chevron-down'></i>
-                    </a>
-                    <div class="dropdown-box">
-                        <a href="#">Monitoring Progress DO Bahan Ajar</a>
-                        <a href="#">Rekap Bahan Ajar</a>
-                    </div>
-                </li>
-                <li>
-                    <a href="#" class="nav-link">
-                        <i class="bx bx-transfer"></i><span>Transaksi</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="login.html" class="nav-link hidden log-in">
-                        <i class="bx bx-user"></i><span>Sign In</span>
-                    </a>
-                    <a href="#" onclick="logout(event)" class="nav-link hidden log-out">
-                        <i class="bx bx-power-off"></i><span>Logout</span>
-                    </a>
-                </li>
-            </ul>
+    <header class="main-header" id="nav-header">
 
-            <div class="nav-actions">
-                <button class="icon-btn hidden log-in" onclick="sign(event)"><i class='bx bx-user-circle'></i></button>
-                <button class="icon-btn hidden log-out" onclick="logout(event)"><i class='bx bx-power-off'></i></button>
-            </div>
-        </nav>
     </header>
     <!-- END HEADER -->
 
@@ -90,9 +41,9 @@
                 <h3>Trending books</h3>
             </div>
             <div class="book-horizontal-scroll" id="trending-book">
-               
 
-               
+
+
             </div>
         </section>
 
@@ -102,43 +53,21 @@
                 <a href="bahan-ajar.html" class="text-btn">See all</a>
             </div>
             <div class="book-list" id="bahan-ajar-latest">
-               
+
             </div>
         </section>
     </main>
     <!-- END CONTENT -->
 
-    <nav class="mobile-bottom-nav">
-        <a href="index.html" class="nav-item">
-            <i class='bx bx-home'></i>
-            <span>Home</span>
-        </a>
-        <a href="bahan-ajar.html" class="nav-item">
-            <i class='bx bx-library'></i>
-            <span>Bahan Ajar</span>
-        </a>
-        <a href="#" class="nav-item">
-            <i class='bx bx-map-pin'></i>
-            <span>Tracking</span>
-        </a>
-        <a href="javascript:void(0)" class="nav-item" onclick="toggleLaporanMenu()">
-            <i class='bx bx-line-chart'></i>
-            <span>Laporan</span>
-        </a>
-        <a href="#" class="nav-item">
-            <i class='bx bx-transfer'></i>
-            <span>Transaksi</span>
-        </a>
-    </nav>
+    <footer id="nav-bottom">
+       
+    </footer>
 
-    <div class="mobile-overlay" id="laporan-overlay">
-        <div class="overlay-content">
-            <div class="overlay-body">
-                <a href="#"><i class='bx bx-search-alt'></i> Monitoring Progress DO</a>
-                <a href="#"><i class='bx bx-file'></i> Rekap Bahan Ajar</a>
-            </div>
-        </div>
+
+     <div class="mobile-overlay" id="laporan-overlay">
+         
     </div>
+
 
 
     <div class="toast-container" id="toastContainer">
@@ -146,10 +75,13 @@
     </div>
 
     <script src="js/data.js"></script>
-     <script src="js/database.js"></script>
+    <script src="js/database.js"></script>
+    <script src="js/component/header.js"></script>
+    <script src="js/component/navBottom.js"></script>
+    <script src="js/component/mobileOverlay.js"></script>
     <script src="js/script.js"></script>
     <script src="js/dashboard.js"></script>
-   
+
 </body>
 
 </html>
