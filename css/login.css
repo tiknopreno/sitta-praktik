@@ -161,9 +161,7 @@ input::placeholder {
 
 .btn-submit:hover {
     background-color:#818cf8;
-    transform: translateY(-2px);
     color: #fff;
-    box-shadow: 0 10px 20px -5px #818cf8;
 }
 
 .btn-submit:active {

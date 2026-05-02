@@ -121,6 +121,19 @@ const clearValidasi = (formElement) => {
     });
 };
 
+function toggleLaporanMenu() {
+    const overlay = document.getElementById('laporan-overlay');
+    overlay.classList.toggle('show');
+}
+
+
+window.onclick = function(event) {
+    const overlay = document.getElementById('laporan-overlay');
+    if (event.target == overlay) {
+        overlay.classList.remove('show');
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
 
 
@@ -221,5 +234,23 @@ document.addEventListener('DOMContentLoaded', () => {
             if (activeModal) closeModal(activeModal);
         }
     });
+
+    // INCLUDES
+    const headerContainer = document.getElementById("nav-header");
+    const navBottom = document.getElementById("nav-bottom");
+    const overlayContainer = document.getElementById("laporan-overlay");
+
+    if(headerContainer){
+        headerContainer.innerHTML = headerComponent;
+    }
+
+    if(navBottom){
+        navBottom.innerHTML = navBottomComponent;
+    }
+
+    if(overlayContainer){
+        overlayContainer.innerHTML = overlayMobile;
+    }
+   
 
 });

@@ -24,19 +24,6 @@ const getDataByLimit = (dataMentah , page = 1, limit =4) => {
 };
 
 
-function toggleLaporanMenu() {
-    const overlay = document.getElementById('laporan-overlay');
-    overlay.classList.toggle('show');
-}
-
-
-window.onclick = function(event) {
-    const overlay = document.getElementById('laporan-overlay');
-    if (event.target == overlay) {
-        overlay.classList.remove('show');
-    }
-}
-
 const cariData = (keyword) => {
 
     dataShow = sourceData.filter(item => {
