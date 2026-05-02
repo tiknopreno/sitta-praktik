@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masuk - SITTA UT</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/toast.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+</head>
+
+<body>
+
+    <main class="login-container">
+        <section class="login-card">
+            <header class="login-header">
+                <div class="logo">
+                    <h1>SITTA</h1>
+                </div>
+                <p>Aplikasi Pemesanan Bahan Ajar Digtial</p>
+                <div class="info-banner">
+                    <i class='bx bxs-zap'></i>
+                    <p>
+                        Untuk run, mohon baca:
+                        <a href="https://github.com/tiknopreno/sitta-praktik/blob/master/README.md" target="_blank">README.md</a>
+                    </p>
+                </div>
+            </header>
+
+
+            <form onsubmit="handleLogin(event ,this)" class="login-form">
+                <div class="input-group">
+                    <label for="email" class="visually-hidden">Email</label>
+                    <input type="email" onblur="checkValidasi(event)" data-rules="validEmail"
+                        data-validasi-text="login-email" name="email" id="emailLogin" placeholder="Email" required>
+                    <small id="login-email">
+
+                    </small>
+                </div>
+                <div class="input-group">
+                    <label for="password" class="visually-hidden">Password</label>
+                    <div class="password-wrapper">
+                        <input type="password" name="password" id="password-login" placeholder="Password"
+                            data-rules="minLength" data-validasi-text="msg-pw-login" data-min="8"
+                            onblur="checkValidasi(event)" required>
+                        <button type="button" class="toggle-password" data-target="password-login">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-eye">
+                                <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
+                                <circle cx="12" cy="12" r="3" />
+                            </svg>
+                        </button>
+                    </div>
+                    <small id="msg-pw-login">
+
+                    </small>
+                </div>
+                <button type="submit" class="btn-submit">Masuk</button>
+            </form>
+            <footer class="login-footer">
+                 <p>Beleum punya akun?</p> <a href="#" data-open="daftar-modal">Daftar</a>
+                <p>Lupas password?</p> <a href="#" data-open="reset-modal">Reset</a>
+            </footer>
+        </section>
+    </main>
+
+    <!-- TOAST -->
+    <div class="toast-container" id="toastContainer">
+
+    </div>
+
+    <!-- MODAL -->
+
+    <div id="reset-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button id="close-modal" class="close-btn">&times;</button>
+            <header class="login-header">
+                <h1>Lupa Password</h1>
+                <p>Aplikasi Pemesanan Bahan Ajar Digtial</p>
+            </header>
+
+            <form class="login-form" onsubmit="resetPassword(event , this)">
+
+                <div class="input-group">
+                    <label for="email" class="visually-hidden">Email</label>
+                    <input type="email" name="email" id="emailReset" data-rules="validEmail"
+                        data-validasi-text="reset-password" onblur="checkValidasi(event)" placeholder="Masukan email"
+                        required>
+                    <small id="reset-password">
+
+                    </small>
+                </div>
+
+
+                <button type="submit" class="btn-submit">Reset Password</button>
+            </form>
+        </div>
+    </div>
+
+
+    <div id="daftar-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button id="close-modal" class="close-btn">&times;</button>
+            <header class="login-header">
+                <h1>Daftar akun</h1>
+                <p>Aplikasi Pemesanan Bahan Ajar Digtial</p>
+            </header>
+
+            <form class="login-form" onsubmit="register(event ,this)">
+                <div class="input-group">
+                    <label for="name" class="visually-hidden">Nama Lengkap</label>
+                    <input type="text" name="nama" id="nama" placeholder="Nama lengkap" data-rules="maxLength"
+                        data-max="35" data-validasi-text="msg-full-name" onblur="checkValidasi(event)" required>
+                    <small id="msg-full-name">
+
+                    </small>
+                </div>
+                <div class="input-group">
+                    <label for="email" class="visually-hidden">Email</label>
+                    <input type="email" name="email" id="email" onblur="checkValidasi(event)" data-rules="validEmail"
+                        data-validasi-text="email-daftar-akun" placeholder="Masukan email" required>
+                    <small id="email-daftar-akun">
+
+                    </small>
+                </div>
+                <div class="input-group">
+                    <label for="password" class="visually-hidden">Password</label>
+                    <div class="password-wrapper">
+                        <input type="password" name="password" id="password-daftar" data-rules="minLength"
+                            data-validasi-text="message-password" onblur="checkValidasi(event)"
+                            placeholder="Masukan password" required>
+                        <button type="button" class="toggle-password" data-target="password-daftar">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-eye">
+                                <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
+                                <circle cx="12" cy="12" r="3" />
+                            </svg>
+                        </button>
+                    </div>
+                    <small id="message-password">
+
+                    </small>
+                </div>
+                <div class="input-group">
+                    <label for="password" class="visually-hidden">Ulangi password</label>
+                    <div class="password-wrapper">
+                        <input type="password" name="repassword" id="repassword" data-rules="confirmPassword"
+                            data-compare="password-daftar" data-validasi-text="msg-confirm"
+                            onblur="checkValidasi(event)" placeholder="Ulangi password" required>
+                        <button type="button" class="toggle-password" data-target="repassword-daftar">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-eye">
+                                <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
+                                <circle cx="12" cy="12" r="3" />
+                            </svg>
+                        </button>
+                    </div>
+                    <small id="msg-confirm">
+
+                    </small>
+                </div>
+                <div class="input-group">
+                    <label for="role" class="visually-hidden">Role</label>
+                    <input type="text" name="role" id="role" placeholder="Masukan role">
+                </div>
+                <div class="input-group">
+                    <label for="lokasi" class="visually-hidden">Lokasi</label>
+                    <input type="text" name="lokasi" id="lokasi" placeholder="Masukan lokasi">
+                </div>
+                <button type="submit" class="btn-submit">Daftar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/validationRules.js"></script>
+    <script src="js/database.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/handle.js"></script>
+</body>
+
+</html>

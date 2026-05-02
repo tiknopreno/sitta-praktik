@@ -72,37 +72,27 @@
     <!-- CONTENT -->
     <main class="container">
 
-        <section class="welcome-section hidden" id="welcom-nologin">
-            <h2>Silahkan login terlebih dahulu</h2>
-            <p>Untuk menggunakan aplikasi yang lebih baik</p>
-        </section>
-        <section class="welcome-section hidden" id="welcom-login">
-            <h2>Halo, <span id="dynamic-greeting"></span> <strong id="namauser"></strong></h2>
-            <div class="time-display">
-                <i class='bx bx-time-five'></i>
-                <span id="live-clock">Memuat waktu...</span>
+
+        <section class="search-section">
+            <div class="search-wrapper">
+                <i class="bx bx-search"></i>
+                <input type="text" onkeyup="cariData(this.value)" placeholder="Ketik nama bahan ajar atau kode barang">
             </div>
         </section>
 
 
-        <section class="book-grid-section">
-            <div class="section-header">
-                <h3>Trending books</h3>
-            </div>
-            <div class="book-horizontal-scroll" id="trending-book">
-               
-
-               
-            </div>
-        </section>
 
         <section class="list-section">
             <div class="section-header">
                 <h3>Bahan Ajar</h3>
-                <a href="bahan-ajar.html" class="text-btn">See all</a>
             </div>
-            <div class="book-list" id="bahan-ajar-latest">
-               
+            <div class="book-list bahan-ajar-latest">
+
+            </div>
+
+
+            <div id="pagination-controls" class="pagination-flex">
+
             </div>
         </section>
     </main>
@@ -146,10 +136,11 @@
     </div>
 
     <script src="js/data.js"></script>
-     <script src="js/database.js"></script>
+    <script src="js/database.js"></script>
     <script src="js/script.js"></script>
-    <script src="js/dashboard.js"></script>
-   
+    <script src="js/stok.js"></script>
+
+
 </body>
 
 </html>
