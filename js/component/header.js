@@ -15,22 +15,22 @@ const headerComponent = `
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="nav-link">
+                    <a href="tracking.html" class="nav-link">
                         <i class="bx bx-map-pin"></i><span>Tracking</span>
                     </a>
                 </li>
                 <li class="dropdown-wrapper">
-                    <a href="#" class="nav-link">
+                    <a href="#" class="nav-link" id="dropdown-head">
                         <i class='bx bx-bar-chart-alt-2'></i>
                         Laporan <i class='bx bx-chevron-down'></i>
                     </a>
                     <div class="dropdown-box">
-                        <a href="#">Monitoring Progress DO Bahan Ajar</a>
-                        <a href="#">Rekap Bahan Ajar</a>
+                        <a href="monitoring-do.html">Monitoring Progress DO Bahan Ajar</a>
+                        <a href="rekap-bahan-ajar.html">Rekap Bahan Ajar</a>
                     </div>
                 </li>
                 <li>
-                    <a href="#" class="nav-link">
+                    <a href="history-transaksi.html" class="nav-link">
                         <i class="bx bx-transfer"></i><span>Transaksi</span>
                     </a>
                 </li>

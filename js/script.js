@@ -4,6 +4,46 @@ const isValidEmail = (email) => {
 };
 
 
+const formatRupiah = (number) => {
+  return new Intl.NumberFormat("id-ID", {
+    style: "currency",
+    currency: "IDR",
+    minimumFractionDigits: 0
+  }).format(number);
+};
+
+
+const estimasiDate = (date, estimasi = 5) => {
+
+    let newDate = new Date(date);
+    newDate.setDate(newDate.getDate() + estimasi);
+
+    const dateEstimasi = newDate.toISOString().split('T')[0];
+
+    return convertTanggal(dateEstimasi);
+
+};
+
+const convertTanggal = (date) => {
+
+    const stringDate = date.split("-");
+
+    const tahun = stringDate[0];
+    const bulan = stringDate[1];
+    const tanggal = stringDate[2];
+
+    const daftarBulan = [
+        "Januari", "Februari", "Maret", "April", "Mei", "Juni",
+        "Juli", "Agustus", "September", "Oktober", "November", "Desember"
+    ];
+
+    const newBulan = daftarBulan[parseInt(bulan) - 1];
+
+    return `${tanggal} ${newBulan} ${tahun}`;
+
+};
+
+
 
 function showToast(message, type = 'success', duration = 5000) {
     const containerToast = document.getElementById('toastContainer');
@@ -137,24 +177,52 @@ window.onclick = function(event) {
 document.addEventListener('DOMContentLoaded', () => {
 
 
+    // INCLUDES
+    const headerContainer = document.getElementById("nav-header");
+    const navBottom = document.getElementById("nav-bottom");
+    const overlayContainer = document.getElementById("laporan-overlay");
+
+    if(headerContainer){
+        headerContainer.innerHTML = headerComponent;
+    }
+
+    if(navBottom){
+        navBottom.innerHTML = navBottomComponent;
+    }
+
+    if(overlayContainer){
+        overlayContainer.innerHTML = overlayMobile;
+    }
+
+
     // NAV ITEM
     const path = window.location.pathname.split("/").pop() || "index.html";
 
     const link = document.querySelectorAll('.nav-item, .nav-link');
     const title = document.querySelector('.title');
+    const dropDown = document.querySelector('#dropdown-head');
 
 
     let cleanName = path.replace(".html" , "");
 
-
     link.forEach(link => {
 
         const href = link.getAttribute('href');
+        
 
 
         if (path === 'index.html' && href === 'index.html') {
 
             link.classList.add('active');
+
+        }else if(path === 'monitoring-do.html'){
+
+            dropDown.classList.add('active');
+
+        }else if(path === 'rekap-bahan-ajar.html'){
+
+            dropDown.classList.add('active');
+
 
         } else {
 
@@ -235,22 +303,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // INCLUDES
-    const headerContainer = document.getElementById("nav-header");
-    const navBottom = document.getElementById("nav-bottom");
-    const overlayContainer = document.getElementById("laporan-overlay");
-
-    if(headerContainer){
-        headerContainer.innerHTML = headerComponent;
-    }
-
-    if(navBottom){
-        navBottom.innerHTML = navBottomComponent;
-    }
-
-    if(overlayContainer){
-        overlayContainer.innerHTML = overlayMobile;
-    }
+  
    
 
 });

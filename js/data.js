@@ -41,6 +41,33 @@ var dataPengguna = [
   }
 ];
 
+var dataProgress = [
+  {
+    idProgress: 1,
+    iduser: 6,
+    kodeBarang: "MSIM440201",
+    progress: 10,
+  },
+  {
+    idProgress: 2,
+    iduser: 6,
+    kodeBarang: "MSIM430201",
+    progress: 50,
+  },
+  {
+    idProgress: 3,
+    iduser: 6,
+    kodeBarang: "MKWI420202",
+    progress: 100,
+  },
+  {
+    idProgress: 4,
+    iduser: 1,
+    kodeBarang: "EKMA4216",
+    progress: 0,
+  }
+];
+
 var dataBahanAjar = [
   {
     kodeLokasi: "0TMP01",
@@ -49,6 +76,7 @@ var dataBahanAjar = [
     jenisBarang: "BMP",
     edisi: "2",
     stok: 548,
+    harga: 85500,
     cover: "img/pengantar_komunikasi.jpg"
   },
   {
@@ -58,6 +86,7 @@ var dataBahanAjar = [
     jenisBarang: "BMP",
     edisi: "3",
     stok: 392,
+    harga: 125000,
     cover: "img/manajemen_keuangan.jpg"
   },
   {
@@ -67,6 +96,7 @@ var dataBahanAjar = [
     jenisBarang: "BMP",
     edisi: "1",
     stok: 278,
+    harga: 92000,
     cover: "img/kepemimpinan.jpg"
   },
   {
@@ -76,6 +106,7 @@ var dataBahanAjar = [
     jenisBarang: "BMP",
     edisi: "2",
     stok: 165,
+    harga: 148500,
     cover: "img/mikrobiologi.jpg"
   },
   {
@@ -85,7 +116,8 @@ var dataBahanAjar = [
     jenisBarang: "BMP",
     edisi: "4",
     stok: 204,
-    cover: "img/paud_perkembangan.jpg"
+    harga: 76000,
+    cover: "img/paud_perkembangan.jpeg"
   },
   {
     kodeLokasi: "MSIMIN428",
@@ -94,6 +126,7 @@ var dataBahanAjar = [
     jenisBarang: "BMP",
     edisi: "4",
     stok: 215,
+    harga: 110500,
     cover: "https://univterbuka.kotobee.com/books/f1e9d2911d/EPUB/EPUB/imgs/cover_thumb.png"
   },
   {
@@ -103,6 +136,7 @@ var dataBahanAjar = [
     jenisBarang: "BMP",
     edisi: "6",
     stok: 432,
+    harga: 65000,
     cover: "https://univterbuka.kotobee.com/books/fcd3ea5d4b/EPUB/EPUB/imgs/untitled07_thumb.jpg"
   },
   {
@@ -112,6 +146,7 @@ var dataBahanAjar = [
     jenisBarang: "BMP",
     edisi: "9",
     stok: 128,
+    harga: 175000,
     cover: "https://univterbuka.kotobee.com/books/f931039990/EPUB/EPUB/imgs/untitled11_thumb.jpg"
   },
   {
@@ -121,33 +156,37 @@ var dataBahanAjar = [
     jenisBarang: "BMP",
     edisi: "3",
     stok: 310,
+    harga: 132500,
     cover: "https://univterbuka.kotobee.com/books/f4408cec92/EPUB/EPUB/imgs/gambar4_thumb.png"
   },
   {
     kodeLokasi: "MSIMAN119",
-    kodeBarang: "MSIM430201",
+    kodeBarang: "MSIM430201", // Tetap
     namaBarang: "Analisis dan Perancangan Sistem",
     jenisBarang: "BMP",
     edisi: "7",
     stok: 87,
+    harga: 198000,
     cover: "https://univterbuka.kotobee.com/books/ff1b155dd3/EPUB/EPUB/imgs/18_thumb.png"
   },
   {
     kodeLokasi: "MSIMSI772",
-    kodeBarang: "MSIM430201",
+    kodeBarang: "MSIM430101", // Diubah dari MSIM430201
     namaBarang: "Sistem Informasi Manajemen",
     jenisBarang: "BMP",
     edisi: "1",
     stok: 456,
+    harga: 115000,
     cover: "https://univterbuka.kotobee.com/books/f0d5c5572b/EPUB/EPUB/imgs/cover_thumb.png"
   },
   {
     kodeLokasi: "MSIMPE341",
-    kodeBarang: "MSIM430201",
+    kodeBarang: "MSIM430301", // Diubah dari MSIM430201
     namaBarang: "Pemprograman Web",
     jenisBarang: "BMP",
     edisi: "5",
     stok: 192,
+    harga: 142000,
     cover: "https://univterbuka.kotobee.com/books/ff749a18d2/EPUB/EPUB/imgs/cover01_thumb.png"
   },
   {
@@ -157,6 +196,7 @@ var dataBahanAjar = [
     jenisBarang: "BMP",
     edisi: "8",
     stok: 275,
+    harga: 138500,
     cover: "https://univterbuka.kotobee.com/books/fe4ebb2ecd/EPUB/EPUB/imgs/cvr_thumb.png"
   },
   {
@@ -166,6 +206,7 @@ var dataBahanAjar = [
     jenisBarang: "BMP",
     edisi: "2",
     stok: 398,
+    harga: 89000,
     cover: "https://univterbuka.kotobee.com/books/f7505ea17a/EPUB/EPUB/imgs/ekma415803_coverluar_thumb.jpg"
   },
   {
@@ -175,6 +216,7 @@ var dataBahanAjar = [
     jenisBarang: "BMP",
     edisi: "4",
     stok: 145,
+    harga: 120500,
     cover: "https://univterbuka.kotobee.com/books/f287bcd665/EPUB/EPUB/imgs/capture_thumb.PNG"
   },
   {
@@ -184,6 +226,7 @@ var dataBahanAjar = [
     jenisBarang: "BMP",
     edisi: "6",
     stok: 499,
+    harga: 45000,
     cover: "https://univterbuka.kotobee.com/books/fd243fa88e/EPUB/EPUB/imgs/capture_thumb.PNG"
   },
   {
@@ -193,6 +236,7 @@ var dataBahanAjar = [
     jenisBarang: "BMP",
     edisi: "3",
     stok: 321,
+    harga: 48500,
     cover: "https://univterbuka.kotobee.com/books/fee945ed8e/EPUB/EPUB/imgs/capture_thumb.PNG"
   },
   {
@@ -202,6 +246,7 @@ var dataBahanAjar = [
     jenisBarang: "BMP",
     edisi: "9",
     stok: 287,
+    harga: 165000,
     cover: "https://univterbuka.kotobee.com/books/fd88c5c1d5/EPUB/EPUB/imgs/capture_thumb.PNG"
   },
   {
@@ -211,6 +256,7 @@ var dataBahanAjar = [
     jenisBarang: "BMP",
     edisi: "2",
     stok: 110,
+    harga: 112000,
     cover: "https://univterbuka.kotobee.com/books/f0fcd35053/EPUB/EPUB/imgs/capture_thumb.PNG"
   },
   {
@@ -220,6 +266,7 @@ var dataBahanAjar = [
     jenisBarang: "BMP",
     edisi: "1",
     stok: 415,
+    harga: 95500,
     cover: "https://univterbuka.kotobee.com/books/fe931b52df/EPUB/EPUB/imgs/capture_thumb.PNG"
   }
 ];
@@ -227,21 +274,26 @@ var dataBahanAjar = [
 var dataTracking = {
   "2023001234": {
     nomorDO: "2023001234",
+    idUser: 1,
     nama: "Rina Wulandari",
     status: "Dalam Perjalanan",
     ekspedisi: "JNE",
     tanggalKirim: "2025-08-25",
     paket: "0JKT01",
     total: "Rp 180.000",
-    perjalanan:[
+    perjalanan: [
       {
-        waktu: "2025-08-25 10:12:20",
-        keterangan: "Penerimaan di Loket: TANGERANG SELATAN. Pengirim: Universitas Terbuka"
+        waktu: "2025-08-25 16:30:10",
+        keterangan: "Diteruskan ke Kantor Kota Bandung"
       },
       {
-        waktu: "2025-08-25 14:07:56",
-        keterangan: "Tiba di Hub: TANGERANG SELATAN"
-      },      
+        waktu: "2025-08-26 12:15:33",
+        keterangan: "Tiba di Hub: Kota BANDUNG"
+      },
+      {
+        waktu: "2025-08-26 15:06:12",
+        keterangan: "Proses antar ke Cimahi"
+      },
       {
         waktu: "2025-08-25 10:12:20",
         keterangan: "Diteruskan ke Kantor Jakarta Selatan"
@@ -249,14 +301,15 @@ var dataTracking = {
     ]
   },
   "2023005678": {
-    nomorDO: "2023001234",
+    nomorDO: "2023005678",
+    idUser: 2,
     nama: "Agus Pranoto",
     status: "Dikirim",
     ekspedisi: "Pos Indonesia",
     tanggalKirim: "2025-08-25",
     paket: "0UPBJJBDG",
     total: "Rp 220.000",
-    perjalanan:[
+    perjalanan: [
       {
         waktu: "2025-08-25 10:12:20",
         keterangan: "Penerimaan di Loket: TANGERANG SELATAN. Pengirim: Universitas Terbuka"
@@ -264,7 +317,7 @@ var dataTracking = {
       {
         waktu: "2025-08-25 14:07:56",
         keterangan: "Tiba di Hub: TANGERANG SELATAN"
-      },      
+      },
       {
         waktu: "2025-08-25 16:30:10",
         keterangan: "Diteruskan ke Kantor Kota Bandung"
