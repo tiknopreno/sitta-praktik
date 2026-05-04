@@ -8,7 +8,7 @@ const navBottomComponent = `
                 <i class='bx bx-library'></i>
                 <span>Bahan Ajar</span>
             </a>
-            <a href="#" class="nav-item">
+            <a href="tracking.html" class="nav-item">
                 <i class='bx bx-map-pin'></i>
                 <span>Tracking</span>
             </a>
@@ -16,7 +16,7 @@ const navBottomComponent = `
                 <i class='bx bx-line-chart'></i>
                 <span>Laporan</span>
             </a>
-            <a href="#" class="nav-item">
+            <a href="history-transaksi.html" class="nav-item">
                 <i class='bx bx-transfer'></i>
                 <span>Transaksi</span>
             </a>

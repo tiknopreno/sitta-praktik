@@ -23,51 +23,52 @@
     <!-- CONTENT -->
     <main class="container">
 
-        <section class="welcome-section hidden" id="welcom-nologin">
-            <h2>Silahkan login terlebih dahulu</h2>
-            <p>Untuk menggunakan aplikasi yang lebih baik</p>
-        </section>
-        <section class="welcome-section hidden" id="welcom-login">
-            <h2>Halo, <span id="dynamic-greeting"></span> <strong id="namauser"></strong></h2>
-            <div class="time-display">
-                <i class='bx bx-time-five'></i>
-                <span id="live-clock">Memuat waktu...</span>
-            </div>
-        </section>
-
-
-        <section class="book-grid-section">
-            <div class="section-header">
-                <h3>Paling disukai</h3>
-            </div>
-            <div class="book-horizontal-scroll" id="trending-book">
 
 
 
-            </div>
-        </section>
+
 
         <section class="list-section">
             <div class="section-header">
-                <h3>Bahan Ajar</h3>
-                <a href="bahan-ajar.html" class="text-btn">See all</a>
+                <h3>Rekap Bahan Ajar</h3>
             </div>
-            <div class="book-list" id="bahan-ajar-latest">
+
+            <div class="search-section">
+                <div class="search-wrapper">
+                    <i class="bx bx-search"></i>
+                    <input type="text" onkeyup="cariData(this.value)"
+                        placeholder="Ketik kode barang">
+                </div>
+            </div>
+            <div class="book-list bahan-ajar-latest">
+
+            </div>
+
+             <div id="empty-content">
+
+               
+
+
+            </div>
+            
+
+            <div id="pagination-controls" class="pagination-flex">
 
             </div>
         </section>
     </main>
     <!-- END CONTENT -->
 
+
+    <!-- NAV BOTTOm -->
     <footer id="nav-bottom">
-       
+
     </footer>
 
+    <!-- OVERLAY LAPORAN -->
+    <div class="mobile-overlay" id="laporan-overlay">
 
-     <div class="mobile-overlay" id="laporan-overlay">
-         
     </div>
-
 
 
     <div class="toast-container" id="toastContainer">
@@ -80,7 +81,8 @@
     <script src="js/component/navBottom.js"></script>
     <script src="js/component/mobileOverlay.js"></script>
     <script src="js/script.js"></script>
-    <script src="js/dashboard.js"></script>
+    <script src="js/rekapBahanAjar.js"></script>
+
 
 </body>
 
