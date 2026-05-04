@@ -21,6 +21,30 @@ Aplikasi juga dapat diakses langsung tanpa instalasi melalui tautan berikut:
 
 ---
 
+# Informasi Login (Data Dummy)
+
+Berikut adalah daftar kredensial yang dapat digunakan untuk masuk ke dalam sistem selama masa pengembangan dan pengujian.
+
+> [!NOTE]  
+> Selain menggunakan data di bawah ini, Anda juga dapat melakukan **registrasi mandiri** melalui halaman pendaftaran yang tersedia di aplikasi jika ingin mencoba alur pembuatan akun baru.
+
+## Tabel Kredensial
+
+| Nama | Email | Password | Role | Lokasi |
+| :--- | :--- | :--- | :--- | :--- |
+| **Rina Wulandari** | `rina@ut.ac.id` | `rina123` | UPBJJ-UT | UPBJJ Jakarta |
+| **Agus Pranoto** | `agus@ut.ac.id` | `agus123` | UPBJJ-UT | UPBJJ Makassar |
+| **Siti Marlina** | `siti@ut.ac.id` | `siti123` | Puslaba | Pusat |
+| **Doni Setiawan** | `doni@ut.ac.id` | `doni123` | Fakultas | FISIP |
+| **Admin SITTA** | `admin@ut.ac.id` | `admin123` | Administrator | Pusat |
+
+## Petunjuk Penggunaan
+1. Pilih salah satu email dan password dari tabel di atas.
+2. Masukkan kredensial pada halaman Login.
+3. Sistem akan memberikan akses sesuai dengan **Role** dan **Lokasi** yang terdaftar.
+
+---
+
 ## 👤 Detail Pengembang
 **TUGAS 1 PRAKTIKUM PEMROGRAMAN WEB**  
 *   **Nama:** Ashri Prastiko Juned
