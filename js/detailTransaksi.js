@@ -1,5 +1,3 @@
-
-
 const renderDetailTransaksi = (id) => {
 
     const container = document.getElementById('detailTransaksi');
